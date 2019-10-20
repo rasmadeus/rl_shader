@@ -1,38 +1,17 @@
 cmake_minimum_required(VERSION 3.14)
 project(rl_shader VERSION 1.0 LANGUAGES CXX)
 
-if(CMAKE_COMPILER_IS_GNUCXX)
-    message(STATUS "GCC detected, adding compile flags")
-	add_compile_options(
-		-Werror
+set(CMAKE_AUTOMOC ON)
+set(CMAKE_AUTORCC ON)
+set(CMAKE_AUTOUIC ON)
 
-		-Wall
-		-Wextra
-		-Wpedantic
+find_package(Qt5 COMPONENTS Gui Qml Quick REQUIRED)
+find_package(Qt5QuickCompiler)
+qtquick_compiler_add_resources(RESOURCES res.qrc)
 
-		-Wcast-align
-		-Wcast-qual
-		-Wconversion
-		-Wctor-dtor-privacy
-		-Wenum-compare
-		-Wfloat-equal
-		-Wnon-virtual-dtor
-		-Wold-style-cast
-		-Woverloaded-virtual
-		-Wredundant-decls
-		-Wsign-conversion
-		-Wsign-promo
-	)
-endif(CMAKE_COMPILER_IS_GNUCXX)
-
-if(NOT CMAKE_CXX_EXTENSIONS)
-    set(CMAKE_CXX_EXTENSIONS OFF)
-endif()
-
-set_target_properties(${TARGET} PROPERTIES
-    CXX_STANDARD 17
-    CXX_STANDARD_REQUIRED YES
-    CXX_EXTENSIONS NO
+add_executable(rl_shader
+    main.cpp
+	${RESOURCES}
 )
 
-add_executable(rl_shader main.cpp)
+target_link_libraries(rl_shader Qt5::Gui Qt5::Qml Qt5::Quick)
