@@ -4,20 +4,20 @@ import QtQuick.Controls 1.4
 
 Window {
     visible: true
-	width: 1000
-	height: 600
+    width: 1000
+    height: 600
 
-	TabView {
-		anchors.fill: parent
-		Tab {
-			title: "Fragment shader"
+    TabView {
+        anchors.fill: parent
+        Tab {
+            title: "Fragment shader"
 
-			FragmentShader{
-			}
-		}
+            FragmentShader{
+            }
+        }
 
-		Tab {
-			title: "Wave effect"
-		}
-	}	
+        Tab {
+            title: "Wave effect"
+        }
+    }
 }
