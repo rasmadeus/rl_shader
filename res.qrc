@@ -1,6 +1,7 @@
 <RCC>
     <qresource prefix="/">
         <file>main.qml</file>
-		<file>tulip.png</file>
+        <file>tulip.png</file>
+        <file>FragmentShader.qml</file>
     </qresource>
 </RCC>
