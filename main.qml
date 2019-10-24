@@ -9,15 +9,15 @@ Window {
 
     TabView {
         anchors.fill: parent
+
         Tab {
             title: "Fragment shader"
-
-            FragmentShader{
-            }
+            FragmentShader{}
         }
 
         Tab {
             title: "Wave effect"
+            WaveShader{}
         }
     }
 }

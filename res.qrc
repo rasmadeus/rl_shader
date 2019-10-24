@@ -3,5 +3,6 @@
         <file>main.qml</file>
         <file>tulip.png</file>
         <file>FragmentShader.qml</file>
+        <file>WaveShader.qml</file>
     </qresource>
 </RCC>
