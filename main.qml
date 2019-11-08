@@ -19,5 +19,10 @@ Window {
             title: "Wave effect"
             WaveShader{}
         }
+
+        Tab {
+            title: "Vertex shader"
+            VertexShader{}
+        }
     }
 }

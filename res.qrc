@@ -4,5 +4,6 @@
         <file>tulip.png</file>
         <file>FragmentShader.qml</file>
         <file>WaveShader.qml</file>
+        <file>VertexShader.qml</file>
     </qresource>
 </RCC>
