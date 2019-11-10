@@ -24,5 +24,10 @@ Window {
             title: "Vertex shader"
             VertexShader{}
         }
+
+        Tab {
+            title: "Primitive bending"
+            BendingShader{}
+        }
     }
 }
